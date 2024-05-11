@@ -1,0 +1,108 @@
+//This is when ran locally or is development
+
+###GET request returns a welcome message
+GET https://localhost:5500/ 
+Content-Type: application/json
+
+#Request for Cars routes
+###GET request that returns all cars
+GET https://localhost:5500/cars
+Content-Type: application/json
+
+### GET request that returns a single car
+GET https://localhost:5500/cars/663d0075a665137bd12b2a6e
+Content-Type: application/json
+
+###POST request creates a car
+POST https://localhost:5500/cars
+Content-Type: application/json
+
+{
+    "make": "testmake",
+    "model": "testmodel",
+    "year": "1999",
+    "trim": "base",
+    "color": "red",
+    "price": "10",
+    "miles": "100,0000"
+}
+
+###PUT request to update a specifc car based on id
+PUT http://localhost:5500/cars/663ee718850d3de7a24fc203
+Content-Type: application/json
+
+{
+    "make": "DO NOT DELETE THIS IS FOR UPDATING ONLY",
+    "model": "I HAVE NOW BEEN UPDATED",
+    "year": 2010,
+    "trim": "base",
+    "color": "red",
+    "price": 101111,
+    "miles": 100000
+}
+
+###PUT request to change this specific entry back to what it was originally
+PUT http://localhost:5500/cars/663ee718850d3de7a24fc203
+Content-Type: application/json
+
+{
+    "make": "DO NOT DELETE THIS IS FOR UPDATING ONLY",
+    "model": "any",
+    "year": 1000,
+    "trim": "base",
+    "color": "red",
+    "price": 3000,
+    "miles": 2000
+}
+
+
+###DELETE request to delete a specific car based on id (insert the id from the created and updated contact)
+DELETE http://localhost:5500/cars/
+
+
+
+
+
+#Requests for games routes 
+###GET request that returns all cars
+GET https://localhost:5500/games
+Content-Type: application/json
+
+### GET request that returns a single car
+GET https://localhost:5500/games
+Content-Type: application/json
+
+###POST request creates a car
+POST https://localhost:5500/games
+Content-Type: application/json
+
+{
+    "name": "testgame Please Delete when done",
+    "rating": "M"
+    
+}
+
+###PUT request to update a specifc car based on id
+PUT http://localhost:5500/games/
+Content-Type: application/json
+
+{
+    "name": "updatedTestGame",
+    "rating": "updated test rating"
+   
+}
+
+
+
+
+###DELETE request to delete a specific car based on id (insert the id from the created and updated contact)
+DELETE http://localhost:5500/games/
+
+
+
+
+
+
+
+//This is on a live site
+
