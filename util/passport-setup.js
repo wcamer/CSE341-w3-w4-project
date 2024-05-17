@@ -28,13 +28,13 @@ passport.use(new gitStrat({
         //     });
 
         // }
-        console.log("HERE IS FROM THE GITSTRAT ITS THE PROFILE",profile)
+        // console.log("HERE IS FROM THE GITSTRAT ITS THE PROFILE",profile)
 
         return done(null,profile);}
 ))
 
 passport.serializeUser((user, done)=>{
-    console.log("here is from the serializerUSER",user)
+    // console.log("here is from the serializerUSER",user)
     done(null,user)
 })
 

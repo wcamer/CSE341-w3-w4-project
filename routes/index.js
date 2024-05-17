@@ -27,10 +27,10 @@ router.use('/logout',(req, res, next)=>{
 router.get('/', (req,res) =>{
     if(req.session.user == undefined){
         res.send("Welcome to Project 2.  Use the cars route or game route")
-        console.log("here is the session object", session)
+        // console.log("here is the session object", session)
     }
     else{
-        console.log('here is the successful session user found',req.session)
+        // console.log('here is the successful session user found',req.session)
         res.send(`Welcome "${req.session.user.username}" to Project 2.  Use the cars route or game route`)
     }
 
